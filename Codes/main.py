@@ -116,7 +116,7 @@ plt.show()
 #2. ZAD
 #a) ucitati signal, vremeski i frekv 
 
-samplerate, data = wavfile.read('C:/Users/Anja/Downloads/Drugi domaci 2022_2023/Drugi zadatak/15.wav')
+samplerate, data = wavfile.read('/15.wav')
 
 dt=1/samplerate
 t=np.arange(0,dt*len(data),dt)
@@ -310,7 +310,7 @@ sd.wait()  # ceka dok se zavrsi snimanje
 wavfile.write('y1.wav', samplerate, myrecording)
 #%%
 
-samplerate, y2 = wavfile.read('C:/Users/Anja/Downloads/Drugi domaci 2022_2023/Treći zadatak/y2.wav')
+samplerate, y2 = wavfile.read('/y2.wav')
 samplerate, y1 = wavfile.read('C:/Users/Anja/.spyder-py3/y1.wav')
 
 
