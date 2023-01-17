@@ -45,26 +45,7 @@ plt.ylabel('ak')
 plt.title('Amplitudska karakteristika - truba')
 plt.show()
 
-# %% 
-# %% SMECE KOD
-# fftfreq generiše učestanosti, a fftshift pomera promenljivu tako da komponenta na učestanosti 0 bude
-#na sredini spektra
-#data – odbirci audio signala
-#fs – učestanost odabiranja datog .wav fajla
-#freq_axis – frekvencijska osa
 
-#freq_axis = fftshift(fftfreq(len(data), 1/fs))
-
-#generisanje pozitivnog dela frekvencijske ose
-#freq_axis_positive = np.arange(0, fs/2, fs/len(data))
- #data – odbirci audio signala 
- #fs – učestanost odabiranja datog .wav fajla
- #freq_axis_positive – frekvencijska osa
- # %% 
- # %% SMECE KOD
-
-
-#%%
 #c)
 
 #NE RUNUJ OPET!!!!!!
@@ -392,8 +373,6 @@ freq_axis = fftshift(fftfreq(len(y2), 1/fs))
 B = np.abs(X_fft) # amplitudski spektar
 X=np.concatenate([B[int(np.ceil(len(B))/2):len(B)],B[0:int(np.ceil(len(B)/2))]])
 
-#X=X[0:int(np.ceil(len(X)/2))]
-#freq_axis_positive = np.arange(0, fs/2, fs/len(y1))
 
 plt.figure()
 plt.plot(freq_axis,X)
@@ -631,8 +610,7 @@ sd.play(scaled, sampleRate1)
 yr = lowpass(5, sampleRate1, freqChannel, yt)
 
 #%%
-#dt2=1/sampleRate2
-#t2=np.arange(0,dt2*len(y2n),dt2)
+
 plt.figure()
 plt.plot(t2,yr)
 plt.xlabel('t')
@@ -653,8 +631,6 @@ freq_axis = fftshift(fftfreq(len(yr), 1/fs))
 B = np.abs(X_fft) # amplitudski spektar
 X=np.concatenate([B[int(np.ceil(len(B))/2):len(B)],B[0:int(np.ceil(len(B)/2))]])
 
-#X=X[0:int(np.ceil(len(X)/2))]
-#freq_axis_positive = np.arange(0, fs/2, fs/len(y1))
 
 plt.figure()
 plt.plot(freq_axis,X)
@@ -705,8 +681,6 @@ freq_axis = fftshift(fftfreq(len(y1r), 1/fs))
 B = np.abs(X_fft) # amplitudski spektar
 X=np.concatenate([B[int(np.ceil(len(B))/2):len(B)],B[0:int(np.ceil(len(B)/2))]])
 
-#X=X[0:int(np.ceil(len(X)/2))]
-#freq_axis_positive = np.arange(0, fs/2, fs/len(y1))
 
 plt.figure()
 plt.plot(freq_axis,X)
@@ -777,8 +751,6 @@ freq_axis = fftshift(fftfreq(len(y2d), 1/fs))
 B = np.abs(X_fft) # amplitudski spektar
 X=np.concatenate([B[int(np.ceil(len(B))/2):len(B)],B[0:int(np.ceil(len(B)/2))]])
 
-#X=X[0:int(np.ceil(len(X)/2))]
-#freq_axis_positive = np.arange(0, fs/2, fs/len(y1))
 
 plt.figure()
 plt.plot(freq_axis,X)
@@ -811,8 +783,6 @@ freq_axis = fftshift(fftfreq(len(y2r), 1/fs))
 B = np.abs(X_fft) # amplitudski spektar
 X=np.concatenate([B[int(np.ceil(len(B))/2):len(B)],B[0:int(np.ceil(len(B)/2))]])
 
-#X=X[0:int(np.ceil(len(X)/2))]
-#freq_axis_positive = np.arange(0, fs/2, fs/len(y1))
 
 plt.figure()
 plt.plot(freq_axis,X)
@@ -834,9 +804,7 @@ sd.play(scaled, sampleRate1)
 scaled = np.int16(y2d/ np.max (np.abs (y2d)) * 32767)
 sd.play(scaled, sampleRate1)
 
-
 #%%
-
 
 scaled = np.int16(y2d/ np.max (np.abs (y2d)) * 32767)
 sd.play(scaled, sampleRate1)
