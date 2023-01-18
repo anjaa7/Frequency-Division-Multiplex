@@ -4,14 +4,14 @@ FDM is a method for transmitting multiple signals simultaneously over a single c
 
 ## Explanation of the each filter in the diagram:
 ### NF filtersat at the input :
-Filters used to limit the frequency band of the input signals 𝑦1(𝑡) and 𝑦2(𝑡) to specific frequency ranges.
+* Filters used to limit the frequency band of the input signals 𝑦1(𝑡) and 𝑦2(𝑡) to specific frequency ranges.
 ### AM modulator:
-It modulates the amplitude of 𝑦2(𝑡) with a carrier frequency 𝑓𝑐.
+* It modulates the amplitude of 𝑦2(𝑡) with a carrier frequency 𝑓𝑐.
 ### Connection channel:
-The channel through which the modulated signals are transmitted.
+* The channel through which the modulated signals are transmitted.
 ### PO filter: 
-It is used to eliminate the unwanted frequency components of the received signal.
+* It is used to eliminate the unwanted frequency components of the received signal.
 ### FM demodulator:
-It demodulates the received signal 𝑦𝑅(𝑡) to obtain the original signal 𝑦2(𝑡).
+* It demodulates the received signal 𝑦𝑅(𝑡) to obtain the original signal 𝑦2(𝑡).
 ### LF filters at the output:
-These filters are used to limit the frequency band of the received signals 𝑦1𝑟(𝑡) and 𝑦2𝑟(𝑡) to specific frequency ranges.
+* These filters are used to limit the frequency band of the received signals 𝑦1𝑟(𝑡) and 𝑦2𝑟(𝑡) to specific frequency ranges.
