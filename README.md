@@ -1,4 +1,4 @@
-#Frequency Division Multiplex
+# Frequency Division Multiplex
 
 FDM is a method for transmitting multiple signals simultaneously over a single channel by dividing the channel into different frequency bands, each carrying a separate signal. An FDM system for independent parallel transmission of two signals would modulate them onto different carrier frequencies and transmit them over the same channel, then demodulate and separate them by their frequency band at the receiving end. This allows for simultaneous transmission of multiple signals without interference.
 
